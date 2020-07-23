@@ -8,10 +8,6 @@ public class PersonAccount implements IAccount {
     private String accNumber;
     private Double amount;
 
-    public PersonAccount(String name, String snn, String accNumber, double amount, double limit) {
-        this.snn = snn;
-    }
-
     @Override
     public void newLimit(){
         double currentLimit = getLimit();
@@ -19,64 +15,58 @@ public class PersonAccount implements IAccount {
         setLimit(newLimit);
     }
 
-    public PersonAccount(){
+    @Override
+    public String printInfo() {
+        return "Account owner: " + this.name + " Account number: " + this.accNumber +
+                " Amount: " + this.amount + " Limit: " + this.limit;
     }
 
     public String getSnn() {
         return snn;
     }
+
     public void setSnn(String snn) {
         this.snn = snn;
     }
 
     @Override
-    public String printInfo() {
-        return null;
-    }
-
-    @Override
     public Double getLimit() {
-        return null;
+        return this.limit;
     }
 
     @Override
     public void setLimit(Double limit) {
-
+        this.limit = limit;
     }
 
     @Override
     public String getName() {
-        return null;
+        return this.name;
     }
 
     @Override
     public void setName(String name) {
-
+        this.name = name;
     }
 
     @Override
     public String getAccNumber() {
-        return null;
+        return this.accNumber;
     }
 
     @Override
     public void setAccNumber(String accNumber) {
-
+        this.accNumber = accNumber;
     }
 
     @Override
     public Double getAmount() {
-        return null;
+        return this.amount;
     }
 
     @Override
     public void setAmount(Double amount) {
-
+        this.amount = amount;
     }
 
-    @Override
-    public String toString() {
-        return "Account owner: " + this.name + " Account number: " + this.accNumber +
-                " Amount: " + this.amount + " Limit: " + this.limit;
-    }
 }

@@ -2,7 +2,7 @@ package com.company;
 
 public interface IAccount {
 
-    void newLimit();
+    public void newLimit();
 
     public String printInfo();
 

@@ -68,6 +68,7 @@ public class Main {
                     IAccount acc;
                     for (int i=0; i<listAccounts.size();i++){
                         acc = listAccounts.get(i);
+                        acc.newLimit();
                         System.out.println(acc.getLimit());
                     }
                     System.out.println("\n");
@@ -82,7 +83,7 @@ public class Main {
 
                 case 5:
                     break;
-                }
-            } while(option != 5);
+            }
+        } while(option != 5);
     }
 }

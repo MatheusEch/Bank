@@ -8,18 +8,11 @@ public class EnterpriseAccount implements IAccount {
     private String accNumber;
     private Double amount;
 
-    public EnterpriseAccount(String name, String cnpj, String accNumber, double amount, double limit) {
-        this.cnpj = cnpj;
-    }
-
     @Override
     public void newLimit(){
         double currentLimit = getLimit();
         double newLimit = currentLimit * 2;
         setLimit(newLimit);
-    }
-
-    public EnterpriseAccount(){
     }
 
     public String getCnpj() {
@@ -31,52 +24,47 @@ public class EnterpriseAccount implements IAccount {
 
     @Override
     public String printInfo() {
-        return null;
+        return "Account owner: " + this.name + " Account number: " + this.accNumber +
+                " Amount: " + this.amount + " Limit: " + this.limit;
     }
 
     @Override
     public Double getLimit() {
-        return null;
+        return this.limit;
     }
 
     @Override
     public void setLimit(Double limit) {
-
+        this.limit = limit;
     }
 
     @Override
     public String getName() {
-        return null;
+        return this.name;
     }
 
     @Override
     public void setName(String name) {
-
+        this.name = name;
     }
 
     @Override
     public String getAccNumber() {
-        return null;
+        return this.accNumber;
     }
 
     @Override
     public void setAccNumber(String accNumber) {
-
+        this.accNumber = accNumber;
     }
 
     @Override
     public Double getAmount() {
-        return null;
+        return this.amount;
     }
 
     @Override
     public void setAmount(Double amount) {
-
-    }
-
-    @Override
-    public String toString() {
-        return "Account owner: " + this.name + " Account number: " + this.accNumber +
-                " Amount: " + this.amount + " Limit: " + this.limit;
+        this.amount = amount;
     }
 }
