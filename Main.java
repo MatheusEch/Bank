@@ -26,7 +26,7 @@ public class Main {
 
                 case 1:
                     System.out.print("Person name: ");
-                    pAccount.setName(input.nextLine());
+                    pAccount.setName(input.next());
                     System.out.print("Person SNN: ");
                     pAccount.setSnn(input.nextLine());
                     System.out.print("Account number: ");
@@ -39,7 +39,7 @@ public class Main {
 
                 case 2:
                     System.out.print("Enterprise name: ");
-                    eAccount.setName(input.nextLine());
+                    eAccount.setName(input.next());
                     System.out.print("Enterprise CNPJ: ");
                     eAccount.setCnpj(input.nextLine());
                     System.out.print("Account number: ");
