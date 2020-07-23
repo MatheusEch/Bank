@@ -1,11 +1,10 @@
 package com.company;
 
-public class EnterpriseAccount extends Account{
+public class EnterpriseAccount implements IAccount {
 
     private String cnpj;
 
     public EnterpriseAccount(String name, String cnpj, String accNumber, double amount, double limit) {
-        super(name, accNumber, amount, limit);
         this.cnpj = cnpj;
     }
 
@@ -24,5 +23,56 @@ public class EnterpriseAccount extends Account{
     }
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
+    }
+
+    @Override
+    public String printInfo() {
+        return null;
+    }
+
+    @Override
+    public Double getLimit() {
+        return null;
+    }
+
+    @Override
+    public void setLimit(Double limit) {
+
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public void setName(String name) {
+
+    }
+
+    @Override
+    public String getAccNumber() {
+        return null;
+    }
+
+    @Override
+    public void setAccNumber(String accNumber) {
+
+    }
+
+    @Override
+    public Double getAmount() {
+        return null;
+    }
+
+    @Override
+    public void setAmount(Double amount) {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Account owner: " + this.name + "Account number: " + this.accNumber +
+                " Amount: " + this.amount + " Limit: " + this.limit + "/n";
     }
 }
