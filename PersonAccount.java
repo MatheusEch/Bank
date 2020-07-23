@@ -17,7 +17,7 @@ public class PersonAccount implements IAccount {
 
     @Override
     public String printInfo() {
-        return "Account owner: " + this.name + " Account number: " + this.accNumber +
+        return "Account owner: " + this.name + " Snn: " + this.snn + " Account number: " + this.accNumber +
                 " Amount: " + this.amount + " Limit: " + this.limit;
     }
 

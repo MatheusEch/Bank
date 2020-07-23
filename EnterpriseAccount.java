@@ -24,7 +24,7 @@ public class EnterpriseAccount implements IAccount {
 
     @Override
     public String printInfo() {
-        return "Account owner: " + this.name + " Account number: " + this.accNumber +
+        return "Account owner: " + this.name + " Cnpj: " + this.cnpj + " Account number: " + this.accNumber +
                 " Amount: " + this.amount + " Limit: " + this.limit;
     }
 

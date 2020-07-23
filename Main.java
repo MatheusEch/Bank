@@ -76,7 +76,7 @@ public class Main {
 
                 case 4:
                     for (int i=0; i<listAccounts.size();i++){
-                        System.out.println(listAccounts.get(i));
+                        System.out.println(listAccounts.get(i).printInfo());
                     }
                     System.out.println("\n");
                     break;
