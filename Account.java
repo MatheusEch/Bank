@@ -2,11 +2,13 @@ package com.company;
 
 public class Account{
 
+    private String name;
     private String accNumber;
     private double amount;
     private double limit;
 
-    public Account(String accNumber, double amount, double limit) {
+    public Account(String name, String accNumber, double amount, double limit) {
+        this.name = name;
         this.accNumber = accNumber;
         this.amount = amount;
         this.limit = limit;
@@ -15,13 +17,14 @@ public class Account{
     public Account() {
     }
 
-    public void newLimit(){
-
-    }
-
     @Override
     public String toString() {
-        return "Account number: " + this.accNumber + " Amount: " + this.amount + " Limit: " + this.limit;
+        return "Account owner: " + this.name + "Account number: " + this.accNumber +
+                " Amount: " + this.amount + " Limit: " + this.limit + "/n";
+    }
+
+    public void newLimit(){
+
     }
 
     public String getAccNumber() {
@@ -42,5 +45,10 @@ public class Account{
     public void setLimit(double limit) {
         this.limit = limit;
     }
-
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 }
