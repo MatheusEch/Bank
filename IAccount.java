@@ -2,11 +2,6 @@ package com.company;
 
 public interface IAccount {
 
-    String name = null;
-    String accNumber = null;
-    double amount = 0;
-    double limit = 0;
-
     void newLimit();
 
     public String printInfo();

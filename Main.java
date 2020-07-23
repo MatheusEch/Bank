@@ -20,7 +20,7 @@ public class Main {
             System.out.println("2- Register a new enterprise account.");
             System.out.println("3- Upgrade limit from all accounts.");
             System.out.println("4- List all accounts.");
-            System.out.println("4- Exit.");
+            System.out.println("5- Exit.");
 
             option = input.nextInt();
 
@@ -68,22 +68,21 @@ public class Main {
                     IAccount acc;
                     for (int i=0; i<listAccounts.size();i++){
                         acc = listAccounts.get(i);
-                        System.out.println(acc.getLimit() + " to ");
                         System.out.println(acc.getLimit());
                     }
+                    System.out.println("\n");
                     break;
 
                 case 4:
                     for (int i=0; i<listAccounts.size();i++){
                         System.out.println(listAccounts.get(i));
                     }
+                    System.out.println("\n");
                     break;
 
                 case 5:
                     break;
                 }
             } while(option != 5);
-
-
     }
 }

@@ -3,6 +3,10 @@ package com.company;
 public class PersonAccount implements IAccount {
 
     private String snn;
+    private Double limit;
+    private String name;
+    private String accNumber;
+    private Double amount;
 
     public PersonAccount(String name, String snn, String accNumber, double amount, double limit) {
         this.snn = snn;
@@ -11,7 +15,7 @@ public class PersonAccount implements IAccount {
     @Override
     public void newLimit(){
         double currentLimit = getLimit();
-        double newLimit = currentLimit * 4;
+        double newLimit = currentLimit * 2;
         setLimit(newLimit);
     }
 
@@ -72,7 +76,7 @@ public class PersonAccount implements IAccount {
 
     @Override
     public String toString() {
-        return "Account owner: " + this.name + "Account number: " + this.accNumber +
-                " Amount: " + this.amount + " Limit: " + this.limit + "/n";
+        return "Account owner: " + this.name + " Account number: " + this.accNumber +
+                " Amount: " + this.amount + " Limit: " + this.limit;
     }
 }

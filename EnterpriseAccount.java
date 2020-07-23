@@ -3,6 +3,10 @@ package com.company;
 public class EnterpriseAccount implements IAccount {
 
     private String cnpj;
+    private Double limit;
+    private String name;
+    private String accNumber;
+    private Double amount;
 
     public EnterpriseAccount(String name, String cnpj, String accNumber, double amount, double limit) {
         this.cnpj = cnpj;
@@ -72,7 +76,7 @@ public class EnterpriseAccount implements IAccount {
 
     @Override
     public String toString() {
-        return "Account owner: " + this.name + "Account number: " + this.accNumber +
-                " Amount: " + this.amount + " Limit: " + this.limit + "/n";
+        return "Account owner: " + this.name + " Account number: " + this.accNumber +
+                " Amount: " + this.amount + " Limit: " + this.limit;
     }
 }
